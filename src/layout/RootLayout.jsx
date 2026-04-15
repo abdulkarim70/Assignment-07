@@ -1,13 +1,15 @@
 import React from 'react';
-import { Outlet } from 'react-router';
+import { Outlet, useLoaderData } from 'react-router';
 import Navbar from '../Components/Navbar';
 import Footer from '../Pages/Footer';
 
 const RootLayout = () => {
+    const data = useLoaderData();
+
     return (
         <div>
          <Navbar/>
-         <Outlet/>
+         <Outlet context={data}/>
         <Footer/>
         </div>
     );

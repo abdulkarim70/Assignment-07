@@ -6,10 +6,16 @@ import { createBrowserRouter } from 'react-router'
 import RootLayout from './layout/RootLayout'
 import Timeline from './Pages/Timeline'
 import Stats from './Pages/Stats'
+import HomePage from './Pages/HomePage'
 const router=createBrowserRouter([
   { path:'/',
    element: <RootLayout/>,
-   children:[{index:true, element:<h2>Home</h2>},
+loader:async()=>{
+  const res = await fetch('/Data.json')
+  return res.json()
+},
+
+   children:[{index:true, element:<HomePage/>},
 {path:'/timeline', element:<Timeline/>},
 {path:'/stats', element:<Stats/>},
 

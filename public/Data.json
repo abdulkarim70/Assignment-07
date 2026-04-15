@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "name": "John Doe",
+    "picture": "https://randomuser.me/api/portraits/men/32.jpg",
+    "email": "john.doe@example.com",
+    "days_since_contact": 12,
+    "status": "overdue",
+    "tags": ["college", "close friend"],
+    "bio": "Met in university. We love hiking and road trips together.",
+    "goal": 14,
+    "next_due_date": "2025-07-20"
+  },
+  {
+    "id": 2,
+    "name": "Sarah Ahmed",
+    "picture": "https://randomuser.me/api/portraits/women/44.jpg",
+    "email": "sarah.ahmed@example.com",
+    "days_since_contact": 5,
+    "status": "on track",
+    "tags": ["work", "marketing team"],
+    "bio": "Colleague from my first job. Always shares great career advice.",
+    "goal": 10,
+    "next_due_date": "2025-04-20"
+  },
+  {
+    "id": 3,
+    "name": "Michael Tan",
+    "picture": "https://randomuser.me/api/portraits/men/65.jpg",
+    "email": "michael.tan@example.com",
+    "days_since_contact": 20,
+    "status": "overdue",
+    "tags": ["gym", "fitness buddy"],
+    "bio": "Workout partner who keeps me accountable at the gym.",
+    "goal": 14,
+    "next_due_date": "2025-04-05"
+  },
+  {
+    "id": 4,
+    "name": "Emily Rodriguez",
+    "picture": "https://randomuser.me/api/portraits/women/68.jpg",
+    "email": "emily.rodriguez@example.com",
+    "days_since_contact": 2,
+    "status": "on track",
+    "tags": ["neighbor", "book club"],
+    "bio": "Neighbor and fellow book lover. We host monthly reading nights.",
+    "goal": 30,
+    "next_due_date": "2025-05-13"
+  },
+  {
+    "id": 5,
+    "name": "David Kim",
+    "picture": "https://randomuser.me/api/portraits/men/22.jpg",
+    "email": "david.kim@example.com",
+    "days_since_contact": 15,
+    "status": "overdue",
+    "tags": ["startup", "tech"],
+    "bio": "Met at a startup event. We brainstorm business ideas often.",
+    "goal": 14,
+    "next_due_date": "2025-04-10"
+  },
+  {
+    "id": 6,
+    "name": "Aisha Rahman",
+    "picture": "https://randomuser.me/api/portraits/women/12.jpg",
+    "email": "aisha.rahman@example.com",
+    "days_since_contact": 7,
+    "status": "on track",
+    "tags": ["family friend", "travel"],
+    "bio": "Family friend who loves traveling and photography.",
+    "goal": 14,
+    "next_due_date": "2025-04-22"
+  },
+  {
+    "id": 7,
+    "name": "Carlos Mendes",
+    "picture": "https://randomuser.me/api/portraits/men/75.jpg",
+    "email": "carlos.mendes@example.com",
+    "days_since_contact": 1,
+    "status": "on track",
+    "tags": ["football", "high school"],
+    "bio": "High school friend and football teammate.",
+    "goal": 21,
+    "next_due_date": "2025-05-05"
+  },
+  {
+    "id": 8,
+    "name": "Lina Chowdhury",
+    "picture": "https://randomuser.me/api/portraits/women/33.jpg",
+    "email": "lina.chowdhury@example.com",
+    "days_since_contact": 18,
+    "status": "overdue",
+    "tags": ["design", "freelance"],
+    "bio": "Freelance designer friend. We collaborate on creative projects.",
+    "goal": 14,
+    "next_due_date": "2025-04-08"
+  }
+]

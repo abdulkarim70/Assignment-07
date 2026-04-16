@@ -13,7 +13,7 @@ const CountDashboard = () => {
             <div className='w-50 h-28 bg-[#FFFFFF] flex flex-col justify-center items-center rounded-md '><p className=' text-[#244D3F]font-semibold text-xl'>  {totalFriends}</p> <p className='text-[#64748B]'>Total Friends</p></div>
             <div className='w-50 h-28 bg-[#FFFFFF] flex flex-col justify-center items-center rounded-md '><p className='text-[#244D3F] font-semibold text-xl'>{onTrackFriends}</p> <p className='text-[#64748B]'>ontrack</p></div>
             <div className='w-50 h-28 bg-[#FFFFFF] flex flex-col justify-center items-center rounded-md '><p className='text-[#244D3F] font-semibold text-xl'>{attentionFriends}</p> <p className='text-[#64748B]'>Need Attention</p></div>
-            <div className='w-50 h-28 bg-[#FFFFFF] flex flex-col justify-center items-center rounded-md '><p className='text-[#244D3F] font-semibold text-xl'>{}</p> <p className='text-[#64748B]'>unknown</p></div>
+            <div className='w-50 h-28 bg-[#FFFFFF] flex flex-col justify-center items-center rounded-md '><p className='text-[#244D3F] font-semibold text-xl'>0</p> <p className='text-[#64748B]'>Interaction this month</p></div>
         </div>
     )
 };

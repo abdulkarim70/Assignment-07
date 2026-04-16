@@ -1,7 +1,7 @@
 import React from 'react';
 import { Outlet, useLoaderData } from 'react-router';
 import Navbar from '../Components/Navbar';
-import Footer from '../Pages/Footer';
+import Footer from '../Components/Footer';
 
 const RootLayout = () => {
     const data = useLoaderData();

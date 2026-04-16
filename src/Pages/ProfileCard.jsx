@@ -2,7 +2,7 @@ import React from "react";
 
 const ProfileCard = ({friendData}) => {
   return (
-    <div className="w-64 p-6 bg-gray-100 rounded-2xl shadow-md text-center">
+    <div className="w-64 p-6 bg-gray-100 rounded-2xl shadow-md text-center mb-12">
       <img
         src={friendData.picture}
         alt="profile Picture"

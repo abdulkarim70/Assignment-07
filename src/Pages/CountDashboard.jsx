@@ -9,12 +9,31 @@ const CountDashboard = () => {
   const attentionFriends = datas.filter(friend => friend.status === 'need attention').length;
 
     return (
-        <div className=' flex justify-center gap-2 mt-10 pb-6 '>
-            <div className='w-50 h-28 bg-[#FFFFFF] flex flex-col justify-center items-center rounded-md '><p className=' text-[#244D3F]font-semibold text-xl'>  {totalFriends}</p> <p className='text-[#64748B]'>Total Friends</p></div>
-            <div className='w-50 h-28 bg-[#FFFFFF] flex flex-col justify-center items-center rounded-md '><p className='text-[#244D3F] font-semibold text-xl'>{onTrackFriends}</p> <p className='text-[#64748B]'>ontrack</p></div>
-            <div className='w-50 h-28 bg-[#FFFFFF] flex flex-col justify-center items-center rounded-md '><p className='text-[#244D3F] font-semibold text-xl'>{attentionFriends}</p> <p className='text-[#64748B]'>Need Attention</p></div>
-            <div className='w-50 h-28 bg-[#FFFFFF] flex flex-col justify-center items-center rounded-md '><p className='text-[#244D3F] font-semibold text-xl'>0</p> <p className='text-[#64748B]'>Interaction this month</p></div>
-        </div>
+        <div className="max-w-6xl mx-auto mt-10 pb-6">
+  <div className="flex justify-center gap-4">
+    
+    <div className="w-52 h-28 bg-white flex flex-col justify-center items-center rounded-md">
+      <p className="text-[#244D3F] font-semibold text-xl">{totalFriends}</p>
+      <p className="text-[#64748B]">Total Friends</p>
+    </div>
+
+    <div className="w-52 h-28 bg-white flex flex-col justify-center items-center rounded-md">
+      <p className="text-[#244D3F] font-semibold text-xl">{onTrackFriends}</p>
+      <p className="text-[#64748B]">On Track</p>
+    </div>
+
+    <div className="w-52 h-28 bg-white flex flex-col justify-center items-center rounded-md">
+      <p className="text-[#244D3F] font-semibold text-xl">{attentionFriends}</p>
+      <p className="text-[#64748B]">Need Attention</p>
+    </div>
+
+    <div className="w-52 h-28 bg-white flex flex-col justify-center items-center rounded-md">
+      <p className="text-[#244D3F] font-semibold text-xl">0</p>
+      <p className="text-[#64748B]">Interaction this month</p>
+    </div>
+
+  </div>
+</div>
     )
 };
 

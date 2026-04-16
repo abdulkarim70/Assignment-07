@@ -5,7 +5,7 @@ import Friends from './Friends';
 
 const HomePage = () => {
     return (
-        <div className=' bg-gray-100'>
+        <div className=' bg-gray-100 '>
             <Banner/>
             <CountDashboard/>
             <Friends/>

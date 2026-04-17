@@ -9,6 +9,7 @@ import Stats from './Pages/Stats'
 import HomePage from './Pages/HomePage'
 import FriendDetails from './Pages/FriendDetails'
 import { Toaster } from "react-hot-toast";
+import NotFound from './Pages/NotFound'
 
 const router=createBrowserRouter([
   { path:'/',
@@ -22,7 +23,7 @@ loader:async()=>{
     {path:'friend/:id', element:<FriendDetails/>},
 {path:'timeline', element:<Timeline/>},
 {path:'stats', element:<Stats/>},
-
+{path:'*' ,element:<NotFound/>},
 
    ],
 

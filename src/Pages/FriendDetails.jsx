@@ -4,6 +4,7 @@ import { useOutletContext, useParams } from "react-router-dom";
 import CallImg from '../assets/call.png'
 import TextImg from '../assets/text.png'
 import VideoImg from '../assets/video.png'
+import toast from "react-hot-toast";
 const FriendDetails = () => {
   const friendsData = useOutletContext();
   const { id } = useParams();
@@ -25,11 +26,33 @@ const FriendDetails = () => {
     }
   };
 
+// handle functions
+const handleAction = (type) => {
+  let actionText = "";
+
+  if (type === "Call") actionText = "Called with";
+  if (type === "Text") actionText = "Texted with";
+  if (type === "Video") actionText = "Video called with";
+
+  const newEntry = {
+    id: Date.now(),
+    type,
+    title: `${actionText} ${friend.name}`,
+    time: new Date().toLocaleString(),
+  };
+
+  const existing = JSON.parse(localStorage.getItem("timeline")) || [];
+  const updated = [newEntry, ...existing];
+
+  localStorage.setItem("timeline", JSON.stringify(updated));
+   toast.success(`${actionText}  ${friend.name}`);
+};
+
   return (
    <div  className="bg-[#F8FAFC]">
      <div className="p-6 max-w-5xl mx-auto grid md:grid-cols-3 gap-6">
       
-      {/* Left Profile Card */}
+     
       <div className="bg-white rounded-2xl shadow-lg p-6 text-center hover:shadow-xl transition">
         <img
           src={friend.picture}
@@ -47,7 +70,7 @@ const FriendDetails = () => {
 
         <p className="mt-4 text-sm text-gray-500 bg-[#CBFADB] w-[50px] mx-auto rounded-full">{friend.interest}</p>
         <p className="text-[#64748B] mt-2">{friend.bio}</p>
-        <p className="text-[#64748B]">Preferred: email</p>
+        <p className="text-[#64748B]"> email : {friend.email}</p>
 
     
        <div className="space-y-2 pt-2">
@@ -58,10 +81,10 @@ const FriendDetails = () => {
 
       </div>
 
-      {/* Right Details */}
+      
       <div className="md:col-span-2 space-y-6">
 
-        {/* Stats */}
+  
         <div className="grid grid-cols-3 gap-4">
           <div className="bg-white p-5 rounded-2xl shadow text-center">
             <h2 className="text-3xl font-bold text-[#244D3F]">
@@ -85,7 +108,7 @@ const FriendDetails = () => {
           </div>
         </div>
 
-        {/* Progress Bar */}
+      
         <div className="bg-white p-5 rounded-2xl shadow space-y-2 justify-center items-center">
           <div className="flex justify-between">
             <h2 className="text-[#244D3F]">Relationship Goal</h2>
@@ -100,17 +123,17 @@ const FriendDetails = () => {
 
   <div className="flex justify-center gap-4 pb-4">
     
-    <div className="flex flex-col items-center bg-gray-100 rounded-md py-3 px-6">
+    <div onClick={()=>handleAction('Call')} className=" cursor-pointer flex flex-col items-center bg-gray-100 rounded-md py-3 px-6">
       <img className="w-8 h-8 mb-1" src={CallImg} alt="Call-image" />
       <h2 className="text-[16px]">Call</h2>
     </div>
 
-    <div className="flex flex-col items-center bg-gray-100 rounded-md py-3 px-6">
+    <div onClick={()=> handleAction('Text')} className="cursor-pointer flex flex-col items-center bg-gray-100 rounded-md py-3 px-6">
       <img className="w-8 h-8 mb-1" src={TextImg} alt="Text-image" />
       <h2 className="text-[16px]">Text</h2>
     </div>
 
-    <div className="flex flex-col items-center bg-gray-100 rounded-md py-3 px-6">
+    <div onClick={()=> handleAction('Video')} className="cursor-pointer flex flex-col items-center bg-gray-100 rounded-md py-3 px-6">
       <img className="w-8 h-8 mb-1" src={VideoImg} alt="Video-image" />
       <h2 className="text-[16px]">Video</h2>
     </div>

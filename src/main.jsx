@@ -8,6 +8,8 @@ import Timeline from './Pages/Timeline'
 import Stats from './Pages/Stats'
 import HomePage from './Pages/HomePage'
 import FriendDetails from './Pages/FriendDetails'
+import { Toaster } from "react-hot-toast";
+
 const router=createBrowserRouter([
   { path:'/',
    element: <RootLayout/>,
@@ -31,5 +33,6 @@ loader:async()=>{
 createRoot(document.getElementById('root')).render(
   <StrictMode>
    <RouterProvider router={router}/>
+   <Toaster position="top-right" />
   </StrictMode>,
 )

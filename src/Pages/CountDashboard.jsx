@@ -5,8 +5,8 @@ const CountDashboard = () => {
     const datas=useOutletContext();
   
   const totalFriends = datas.length;
-  const onTrackFriends = datas.filter(friend => friend.status === 'on track').length;
-  const attentionFriends = datas.filter(friend => friend.status === 'need attention').length;
+  const onTrackFriends = datas.filter(friend => friend.status === 'On Track').length;
+  const attentionFriends = datas.filter(friend => friend.status === 'Need Attention').length;
 
     return (
         <div className="max-w-6xl mx-auto mt-10 pb-6">

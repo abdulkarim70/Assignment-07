@@ -1,5 +1,5 @@
 import React from 'react';
-import { Outlet, useLoaderData } from 'react-router';
+import { Outlet, useLoaderData } from 'react-router-dom';
 import Navbar from '../Components/Navbar';
 import Footer from '../Components/Footer';
 

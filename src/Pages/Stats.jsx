@@ -29,30 +29,30 @@ const Stats = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gray-100 px-6 py-12">
-      
-      
-      <h1 className="text-4xl font-bold text-gray-800 mb-10">
+    <div className="min-h-screen bg-gray-100 px-4 sm:px-6 py-10 sm:py-12">
+
+   
+      <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800 mb-8 sm:mb-10 text-center sm:text-left">
         Friendship Analytics
       </h1>
 
      
-      <div className="bg-white rounded-2xl shadow-md p-8 max-w-4xl mx-auto">
-        
-        <h2 className="text-green-800 font-semibold mb-6">
+      <div className="bg-white rounded-2xl shadow-md p-5 sm:p-8 max-w-4xl mx-auto">
+
+        <h2 className="text-green-800 font-semibold mb-6 text-center sm:text-left">
           By Interaction Type
         </h2>
 
-        
+       
         <div className="flex flex-col items-center justify-center">
-          
-          <div className="w-[300px] h-[300px]">
-            <ResponsiveContainer>
+
+          <div className="w-full max-w-[280px] sm:max-w-[320px] h-[260px] sm:h-[300px]">
+            <ResponsiveContainer width="100%" height="100%">
               <PieChart>
                 <Pie
                   data={chartData}
-                  innerRadius={80}
-                  outerRadius={110}
+                  innerRadius={70}
+                  outerRadius={100}
                   paddingAngle={5}
                   dataKey="value"
                 >
@@ -64,9 +64,9 @@ const Stats = () => {
             </ResponsiveContainer>
           </div>
 
-     
-          <div className="flex gap-8 mt-6 text-sm text-gray-600">
-            
+       
+          <div className="flex flex-wrap justify-center gap-6 sm:gap-8 mt-6 text-sm text-gray-600">
+
             <div className="flex items-center gap-2">
               <span className="w-3 h-3 bg-purple-500 rounded-full"></span>
               Text
@@ -83,6 +83,7 @@ const Stats = () => {
             </div>
 
           </div>
+
         </div>
       </div>
     </div>
